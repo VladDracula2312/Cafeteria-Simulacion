@@ -52,7 +52,7 @@ La interfaz cuenta con un diseño inspirado en el **Carnaval de Barranquilla**, 
 ---
 
 ## 3. Arquitectura Tecnológica
-* **Frontend:** React + Vite + TypeScript + Tailwind CSS + Lucide Icons (Desplegado en Vercel).
+* **Frontend:** React + Vite + TypeScript + Tailwind CSS + Lucide Icons.
 * **Backend:** C# .NET 8 ASP.NET Core Web API + Motor DES propio.
 * **Base de Datos:** MySQL 8.0 con Entity Framework Core (Pomelo Provider) y fallback automático a memoria para pruebas sin caída.
 * **Generación de Reportes Excel:** ClosedXML (.xlsx enriquecido con múltiples hojas de cálculo, KPIs e histórico).
@@ -91,12 +91,3 @@ npm run dev
 ```
 La aplicación abrirá en `http://localhost:5173`.
 
----
-
-## 5. Despliegue en Vercel
-
-1. Sube el repositorio a GitHub o vincula la carpeta `frontend/` en Vercel.
-2. Root Directory en Vercel: `frontend`
-3. Variables de Entorno en Vercel:
-   * `VITE_API_URL`: URL de la API de C# desplegada en la nube (ej. Railway, Render o Azure).
-4. El frontend cuenta con un `vercel.json` preconfigurado con soporte para SPA y fallback resiliente client-side que garantiza que el sistema siempre funcione y permita exportar archivos Excel sin interrupciones.
